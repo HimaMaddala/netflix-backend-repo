@@ -1,8 +1,8 @@
-package com.hotstar.backend.repository;
+//package com.hotstar.backend.repository;
 
-import com.hotstar.backend.model.Movie;
-import org.springframework.data.mongodb.repository.MongoRepository;
+//import com.hotstar.backend.model.Movie;
+//import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface MovieRepository extends MongoRepository<Movie, String> {
-}
+//public interface MovieRepository extends MongoRepository<Movie, String> {
+//}
 
