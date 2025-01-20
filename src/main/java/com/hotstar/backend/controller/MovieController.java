@@ -1,7 +1,7 @@
 package com.hotstar.backend.controller;
 
 import com.hotstar.backend.model.Movie;
-import com.hotstar.backend.repository.MovieRepository;
+//import com.hotstar.backend.repository.MovieRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
