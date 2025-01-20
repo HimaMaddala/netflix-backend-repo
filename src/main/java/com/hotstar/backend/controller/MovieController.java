@@ -11,7 +11,7 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 public class MovieController {
     @GetMapping("/health")
-    public List<Movie> healtCheck {
+    public String healtCheck (){
         return "Test Successfull";
     }
 
