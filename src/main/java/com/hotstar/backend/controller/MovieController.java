@@ -1,7 +1,7 @@
 package com.hotstar.backend.controller;
 
 import com.hotstar.backend.model.Movie;
-//import com.hotstar.backend.repository.MovieRepository;
+import com.hotstar.backend.repository.MovieRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,20 +15,20 @@ public class MovieController {
         return "Test Successfull";
     }
 
-    //private final MovieRepository movieRepository;
+    private final MovieRepository movieRepository;
 
-    //public MovieController(MovieRepository movieRepository) {
-       // this.movieRepository = movieRepository;
-    //}
+    public MovieController(MovieRepository movieRepository) {
+       this.movieRepository = movieRepository;
+    }
 
-    //@GetMapping("/movies")
-    //public List<Movie> getAllMovies() {
-   //     return movieRepository.findAll();
-    //}
+    @GetMapping("/movies")
+    public List<Movie> getAllMovies() {
+       return movieRepository.findAll();
+    }
 
-    // Add a movie
-    //@PostMapping("/movies")
-    //public Movie addMovie(@RequestBody Movie movie) {
-        //return movieRepository.save(movie);
-   // }
+    Add a movie
+    @PostMapping("/movies")
+    public Movie addMovie(@RequestBody Movie movie) {
+        return movieRepository.save(movie);
+   }
 }
