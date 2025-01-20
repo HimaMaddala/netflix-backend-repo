@@ -10,21 +10,25 @@ import java.util.List;
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class MovieController {
-
-    private final MovieRepository movieRepository;
-
-    public MovieController(MovieRepository movieRepository) {
-        this.movieRepository = movieRepository;
+    @GetMapping("/health")
+    public List<Movie> healtCheck {
+        return "Test Successfull";
     }
 
-    @GetMapping("/movies")
-    public List<Movie> getAllMovies() {
-        return movieRepository.findAll();
-    }
+    //private final MovieRepository movieRepository;
+
+    //public MovieController(MovieRepository movieRepository) {
+       // this.movieRepository = movieRepository;
+    //}
+
+    //@GetMapping("/movies")
+    //public List<Movie> getAllMovies() {
+   //     return movieRepository.findAll();
+    //}
 
     // Add a movie
-    @PostMapping("/movies")
-    public Movie addMovie(@RequestBody Movie movie) {
-        return movieRepository.save(movie);
-    }
+    //@PostMapping("/movies")
+    //public Movie addMovie(@RequestBody Movie movie) {
+        //return movieRepository.save(movie);
+   // }
 }
